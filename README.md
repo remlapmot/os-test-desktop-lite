@@ -15,3 +15,4 @@
 ## Helpful references
 
 * https://github.com/devcontainers/features/tree/main/src/desktop-lite
+* https://code.visualstudio.com/docs/devcontainers/create-dev-container
