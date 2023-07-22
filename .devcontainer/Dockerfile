@@ -1,7 +1,8 @@
 FROM --platform=linux/amd64 ubuntu:22.04
 RUN apt-get update && apt-get -y install \
   gdebi-core \
-  git
+  git \
+  wget
 
 # Install GitHub Desktop for Linux https://github.com/shiftkey/desktop
 #RUN wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null \
