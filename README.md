@@ -10,7 +10,7 @@
 * Right click on the desktop to access programs like File Manager and Terminal  
   <img src="img/fluxbox-desktop.png" width="75%">
 
-* When you first launch Terminal you may see this warning message, I find simply clicking to start a new Terminal (below) starts a new Terminal that works
+* When you first launch Terminal you may see this error message, I find simply clicking to *Add terminal down* starts a new Terminal that works (or click on *Create a new session*)
   <img src="img/tilix-terminal-error.png" width="75%">
 
 * To save files in the desktop environment into this repo the directory path is `/workspaces/{repo-name}` so `/workspaces/os-test-desktop-lite` for this repo.
