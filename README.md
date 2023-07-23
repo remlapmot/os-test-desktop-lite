@@ -25,6 +25,12 @@
   <img src="img/fluxbox-github-desktop.png" width="75%">  
   <img src="img/fluxbox-rstudio-desktop.png" width="75%">
 
+* The Stata graphical environment is started from a Terminal with
+  ```
+  /usr/local/stata17/xstata-mp
+  ```  
+  <img src="img/fluxbox-xstata-mp.png" width="75%">
+
 ## Helpful references
 
 * https://github.com/devcontainers/features/tree/main/src/desktop-lite
