@@ -22,6 +22,8 @@ RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
 
 # Install Stata 17 - libncurses5, libgtk2.0-dev required
 RUN mkdir /tmp/statafiles
+RUN mkdir /usr/local/stata17
 COPY stata-linux/Stata17Linux64.tar.gz /tmp/statafiles
+COPY stata-linux/stata.lic /usr/local/stata17
 COPY scripts/install-stata.sh .
 # RUN bash install-stata.sh
