@@ -4,6 +4,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get -y install \
   gdebi-core \
   git \
+  libgtk2.0-dev \
+  libncurses5 \
   wget
 
 # Install GitHub Desktop for Linux https://github.com/shiftkey/desktop
@@ -18,7 +20,7 @@ RUN bash install-r.sh
 ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
 RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
 
-# Install Stata 17
+# Install Stata 17 - libncurses5, libgtk2.0-dev required
 RUN mkdir /tmp/statafiles
 COPY stata-linux/Stata17Linux64.tar.gz /tmp/statafiles
 COPY scripts/install-stata.sh .
