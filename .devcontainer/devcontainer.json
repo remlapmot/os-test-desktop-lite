@@ -1,6 +1,6 @@
 {
   "build": { "dockerfile": "Dockerfile" },
-  "runArgs": ["--platform=linux/amd64" ],
+  "runArgs": ["--platform=linux/amd64", "--shm-size=1g"],
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
