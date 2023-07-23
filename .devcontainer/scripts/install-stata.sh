@@ -7,4 +7,5 @@ tar -zxf Stata17Linux64.tar.gz
 cd /usr/local/stata17
 # run the next command interactively
 # /tmp/statafiles/install
-mv /tmp/statafiles/stata.lic .
+# and then run (or run /usr/local/stata17/stinit.sh)
+# mv /tmp/statafiles/stata.lic .
