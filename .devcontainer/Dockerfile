@@ -24,6 +24,6 @@ RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
 RUN mkdir /tmp/statafiles
 RUN mkdir /usr/local/stata17
 COPY stata-linux/Stata17Linux64.tar.gz /tmp/statafiles
-COPY stata-linux/stata.lic /usr/local/stata17
+COPY stata-linux/stata.lic /tmp/statafiles
 COPY scripts/install-stata.sh .
-# RUN bash install-stata.sh
+# In the devcontainer run the install-stata.sh script
