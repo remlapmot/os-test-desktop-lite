@@ -1,12 +1,13 @@
 FROM --platform=linux/amd64 ubuntu:22.04
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get -y install \
-  gdebi-core \
-  git \
-  libgtk2.0-dev \
-  libncurses5 \
-  wget
+RUN apt-get update \
+  && apt-get -y install \
+    gdebi-core \
+    git \
+    libgtk2.0-dev \
+    libncurses5 \
+    wget
 
 # Install GitHub Desktop for Linux https://github.com/shiftkey/desktop
 ADD https://github.com/shiftkey/desktop/releases/download/release-3.2.5-linux1/GitHubDesktop-linux-3.2.5-linux1.deb .
