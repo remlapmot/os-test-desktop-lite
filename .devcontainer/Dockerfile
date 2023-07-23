@@ -15,5 +15,5 @@ COPY scripts/install-r.sh .
 RUN bash install-r.sh
 
 # Install RStudio Desktop
-# ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
-# RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
+ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
+RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
