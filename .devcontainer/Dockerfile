@@ -437,9 +437,7 @@ RUN R -q -e "install.packages(c('cli', 'fastshap', 'shapviz'), \
 RUN R -q -e "install.packages('epitools', repos = '${RSPM}/2023-06-14+j7ezeyBe')"
 
 RUN R -q -e "ip <- installed.packages()[, c('Package', 'Version')]; \
-             write.csv(ip, \
-                       row.names = FALSE, \
-                       file = '/workspaces/os-test-desktop-lite/packages-desktop-lite.csv')"
+             write.csv(ip, row.names = FALSE, file = 'packages-desktop-lite.csv')"
 
 # Install RStudio Desktop
 ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
