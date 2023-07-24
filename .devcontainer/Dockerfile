@@ -436,6 +436,9 @@ RUN R -q -e "install.packages(c('cli', 'fastshap', 'shapviz'), \
 # 2023-06-16 epitools
 RUN R -q -e "install.packages('epitools', repos = '${RSPM}/2023-06-14+j7ezeyBe')"
 
+# Remove extra packages
+RUN R -q -e "remove.packages(c('brio', 'diffobj', 'rematch2', 'spatial', 'waldo'))"
+
 RUN R -q -e "ip <- installed.packages()[, c('Package', 'Version')]; \
              write.csv(ip, row.names = FALSE, file = 'packages-desktop-lite.csv')"
 
