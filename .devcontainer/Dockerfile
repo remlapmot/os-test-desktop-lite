@@ -317,8 +317,7 @@ RUN R -q -e "install.packages('MASS', \
                               repos = '${RSPM}/2020-09-01+MTozMTcsMjoyODc7QkNBMjZDNQ')"
 
 # Fix naniar from 0.5.2 (2020-06-29) to 0.6.0 (2020-09-02)
-RUN R -q -e "remove.packages('naniar'); \
-             install.packages('naniar', \
+RUN R -q -e "install.packages('naniar', \
                               repos = '${RSPM}/2020-09-08+MTozMjEsMjoyODc7RkVBRjQyMzM')"
 
 # Install nlme 3.1-149 (2020-08-23)
