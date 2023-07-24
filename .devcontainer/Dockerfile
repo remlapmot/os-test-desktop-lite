@@ -445,6 +445,7 @@ RUN R -q -e "install.packages('fda', repos = '${RSPM}/2020-11-30+d7CmGU2g')"
 RUN R -q -e "install.packages('ggdist', repos = '${RSPM}/2020-07-16+4Nnjku1f')"
 RUN R -q -e "install.packages('Gmisc', repos = '${RSPM}/2021-02-16+md0Vvd3A')"
 RUN R -q -e "install.packages('gt', repos = '${RSPM}/2020-08-10+928y75to')"
+RUN R -q- e "install.packages('gtsummary', repos = '${RSPM}/2021-03-01+hKAxRRiO')"
 
 # Remove extra packages
 RUN R -q -e "remove.packages(c('brio', 'diffobj', 'rematch2', 'spatial', 'waldo'))"
