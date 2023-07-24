@@ -439,8 +439,6 @@ RUN R -q -e "install.packages('epitools', repos = '${RSPM}/2023-06-14+j7ezeyBe')
 # Install RStudio Desktop
 ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
 RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
-RUN ln -s /opt/R/4.0.5/bin/R /usr/local/bin/R
-RUN ln -s /opt/R/4.0.5/bin/Rscript /usr/local/bin/Rscript
 
 # Install Stata 17 - libncurses5, libgtk2.0-dev required
 RUN mkdir /tmp/statafiles
