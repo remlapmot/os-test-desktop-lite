@@ -441,6 +441,7 @@ RUN R -q -e "install.packages('bayesplot', repos = '${RSPM}/2020-06-01+4kQ-KzVZ'
 RUN R -q -e "install.packages('brms', repos = '${RSPM}/2020-08-03+BL2MX7Qb')" # obtains rstan also
 RUN R -q -e "install.packages('caret', repos = '${RSPM}/2020-03-23+vXf-G8Qq')"
 RUN R -q -e "install.packages('distributional', repos = '${RSPM}/2020-08-06+f4-Q1rFE')"
+RUN R -q -e "install.packages('fda', repos = '${RSPM}/2020-11-30+d7CmGU2g')"
 
 # Remove extra packages
 RUN R -q -e "remove.packages(c('brio', 'diffobj', 'rematch2', 'spatial', 'waldo'))"
