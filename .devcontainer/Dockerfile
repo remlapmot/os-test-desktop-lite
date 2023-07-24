@@ -287,16 +287,6 @@ RUN R -q -e "install.packages('consort', \
 
 # Fix up packages with incorrect versions
 
-# Remove MASS, mgcv, nlme,  spatial, survival from /usr/local/lib/R/library
-RUN R -q -e "remove.packages(c( \
-                               'MASS', \
-                               'mgcv', \
-                               'nlme', \
-                               'spatial', \
-                               'survival' \
-                              ), \
-                             lib = '/usr/local/lib/R/library')"
-
 # Fix backports from 1.2.1 (2020-12-09) to 1.1.9 (2020-08-24)
 RUN R -q -e "remove.packages('backports'); \
              install.packages('backports', \
