@@ -448,6 +448,7 @@ RUN R -q -e "install.packages('gt', repos = '${RSPM}/2020-08-10+928y75to')"
 RUN R -q- e "install.packages('gtsummary', repos = '${RSPM}/2021-03-01+hKAxRRiO')"
 RUN R -q -e "install.packages('hdrcde', repos = '${RSPM}/2020-12-31+koo0tkDu')"
 RUN R -q -e "install.packages('interactions', repos = '${RSPM}/2021-01-08+UDopNRw3')" # obtains jtools also
+# RUN R -q -e "install.packages('rgeos', repos = '${RSPM}/2020-05-11+uyic0GJV')" # fails due to geos version (libgeos-dev)
 
 # Remove extra packages
 RUN R -q -e "remove.packages(c('brio', 'diffobj', 'rematch2', 'spatial', 'waldo'))"
