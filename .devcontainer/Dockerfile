@@ -436,7 +436,7 @@ RUN R -q -e "install.packages(c('cli', 'fastshap', 'shapviz'), \
 # 2023-06-16 epitools
 RUN R -q -e "install.packages('epitools', repos = '${RSPM}/2023-06-14+j7ezeyBe')"
 
-# Add missing packages
+# Add missing packages (as the binaries seem to be missing for jammy)
 RUN R -q -e "install.packages('bayesplot', repos = '${RSPM}/2020-06-01+4kQ-KzVZ')"
 RUN R -q -e "install.packages('brms', repos = '${RSPM}/2020-08-03+BL2MX7Qb')" # obtains rstan also
 RUN R -q -e "install.packages('caret', repos = '${RSPM}/2020-03-23+vXf-G8Qq')"
