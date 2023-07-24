@@ -17,6 +17,8 @@ RUN gdebi -n GitHubDesktop-linux-3.2.5-linux1.deb
 # Following https://docs.posit.co/resources/install-r/
 ADD https://cdn.rstudio.com/r/ubuntu-2204/pkgs/r-4.0.5_1_amd64.deb .
 RUN gdebi -n r-4.0.5_1_amd64.deb
+RUN ln -s /opt/R/4.0.5/bin/R /usr/local/bin/R
+RUN ln -s /opt/R/4.0.5/bin/Rscript /usr/local/bin/Rscript
 
 # Install RStudio Desktop
 ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
