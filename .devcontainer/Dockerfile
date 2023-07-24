@@ -13,13 +13,16 @@ RUN apt-get update \
 ADD https://github.com/shiftkey/desktop/releases/download/release-3.2.5-linux1/GitHubDesktop-linux-3.2.5-linux1.deb .
 RUN gdebi -n GitHubDesktop-linux-3.2.5-linux1.deb
 
-# Install R
-COPY scripts/install-r.sh .
-RUN bash install-r.sh
+# Install R 4.0.5 as a binary from Posit
+# Following https://docs.posit.co/resources/install-r/
+ADD https://cdn.rstudio.com/r/ubuntu-2204/pkgs/r-4.0.5_1_amd64.deb .
+RUN gdebi -n r-4.0.5_1_amd64.deb
 
 # Install RStudio Desktop
 ADD https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.06.1-524-amd64.deb .
 RUN gdebi -n rstudio-2023.06.1-524-amd64.deb
+RUN ln -s /opt/R/4.0.5/bin/R /usr/local/bin/R
+RUN ln -s /opt/R/4.0.5/bin/Rscript /usr/local/bin/Rscript
 
 # Install Stata 17 - libncurses5, libgtk2.0-dev required
 RUN mkdir /tmp/statafiles
