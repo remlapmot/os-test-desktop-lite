@@ -453,7 +453,8 @@ RUN R -q -e "install.packages('testthat', repos = '${RSPM}/2020-03-05+zn1OmPX-')
 RUN R -q -e "install.packages('fda', repos = '${RSPM}/2020-12-01+aCvxQPDW')"
 
 # Remove extra packages
-RUN R -q -e "remove.packages(c('brio', 'diffobj', 'rematch2', 'spatial', 'waldo'))"
+# RUN R -q -e "remove.packages(c('brio', 'diffobj', 'rematch2', 'spatial', 'waldo'))"
+RUN R -q -e "remove.packages(c('spatial'))"
 
 RUN R -q -e "ip <- installed.packages()[, c('Package', 'Version')]; \
              write.csv(ip, row.names = FALSE, file = 'packages-desktop-lite.csv')"
