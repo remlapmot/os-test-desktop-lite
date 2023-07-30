@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 ubuntu:22.04
+FROM --platform=linux/amd64 ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
@@ -15,7 +15,7 @@ RUN gdebi -n GitHubDesktop-linux-3.2.5-linux1.deb
 
 # Install R 4.0.5 as a binary from Posit
 # Following https://docs.posit.co/resources/install-r/
-ADD https://cdn.rstudio.com/r/ubuntu-2204/pkgs/r-4.0.5_1_amd64.deb .
+ADD https://cdn.rstudio.com/r/ubuntu-2004/pkgs/r-4.0.5_1_amd64.deb .
 RUN gdebi -n r-4.0.5_1_amd64.deb
 RUN ln -s /opt/R/4.0.5/bin/R /usr/local/bin/R
 RUN ln -s /opt/R/4.0.5/bin/Rscript /usr/local/bin/Rscript
@@ -24,7 +24,7 @@ RUN ln -s /opt/R/4.0.5/bin/Rscript /usr/local/bin/Rscript
 
 # Prefixes for RSPM URLs to use in install.packages() repos argument
 ENV RSPM_SOURCE=https://packagemanager.posit.co/cran \
-    RSPM=https://packagemanager.posit.co/all/__linux__/jammy
+    RSPM=https://packagemanager.posit.co/all/__linux__/focal
 
 # Install system requirements in system-packages.txt: libgit2-dev, liblz4-dev, pandoc 
 # In original container the versions are 
